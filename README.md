@@ -1,4 +1,4 @@
-# make-ware Unraid templates
+# Make-Ware Unraid templates
 
 Unraid Community Applications templates for [make-ware](https://makeware.io) — free,
 open-source, self-hosted web applications. Install them from the **Apps** tab in Unraid.
@@ -7,6 +7,7 @@ open-source, self-hosted web applications. Install them from the **Apps** tab in
 
 - **[VideoWare](video-ware/README.md)** — self-hosted, browser-based video editor. Upload
   media, create clips, edit timelines, and collaborate in real time, all from one container.
+  [Github Repo](https://github.com/make-ware/video-ware)
 
 ## Repository layout
 
