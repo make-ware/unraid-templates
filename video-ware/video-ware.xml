@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>VideoWare</Name>
+  <Repository>ghcr.io/make-ware/video-ware:latest</Repository>
+  <Registry>https://github.com/make-ware/video-ware/pkgs/container/video-ware</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/make-ware/video-ware/issues</Support>
+  <Project>https://github.com/make-ware/video-ware</Project>
+  <Overview>Self-contained web based video editor. Upload media, create clips, edit timelines, and collaborate with other users on the same project
+    in real time.</Overview>
+  <Description>VideoWare is a free, open-source video editor that runs entirely in your browser and on your server.
+    Upload media, create clips, edit timelines, and collaborate with other users on the same project
+    in real time. It's self-hosted: everything runs in one container with one data path. Optionally
+    enable Video Intelligence to unlock universal search across your media. This is an open alternative
+    to closed source video editing platforms. Supports local file storage or S3 object storage.
+    For questions, bug reports, and support, please use the GitHub issue tracker. &#xD;
+&#xD;
+This template runs the **monolithic** image, which bundles all services in one container:&#xD;
+- **Next.js web app** - upload, browse, edit, and render media&#xD;
+- **PocketBase** - database, realtime updates, auth, and REST API&#xD;
+- **Background worker** - FFmpeg transcoding, thumbnail/sprite generation, clip rendering, and AI labels&#xD;
+- **Redis** - internal BullMQ job broker (localhost only, not exposed)&#xD;
+- **Nginx** - reverse proxy fronting everything on a single port&#xD;
+&#xD;
+**Access after install:**&#xD;
+- Web app: `http://[IP]:[PORT:80]/`&#xD;
+- PocketBase admin: `http://[IP]:[PORT:80]/_/`&#xD;
+- PocketBase API: `http://[IP]:[PORT:80]/api/`&#xD;
+&#xD;
+**First run:** set a strong **Admin Password** - the PocketBase superuser is auto-created on startup from the Admin Email/Password you provide.&#xD;
+&#xD;
+**Storage:** all persistent data (PocketBase DB, uploaded media, and the Redis queue) lives under the single `/data` mount, so the whole app is captured by one appdata path. Optional S3-compatible storage and Google Cloud Video Intelligence can be enabled via extra variables (see the project README).</Description>
+  <Category>MediaApp:Video Tools:Utilities Productivity</Category>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/make-ware/unraid-templates/main/video-ware/video-ware.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/make-ware/unraid-templates/main/video-ware/icon.png</Icon>
+  <Screenshot>https://raw.githubusercontent.com/make-ware/unraid-templates/main/video-ware/images/video-ware-1.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/make-ware/unraid-templates/main/video-ware/images/video-ware-2.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/make-ware/unraid-templates/main/video-ware/images/video-ware-3.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/make-ware/unraid-templates/main/video-ware/images/video-ware-4.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/make-ware/unraid-templates/main/video-ware/images/video-ware-5.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/make-ware/unraid-templates/main/video-ware/images/video-ware-6.png</Screenshot>
+  <ExtraParams/>
+  <PostArgs/>
+  <DonateText/>
+  <DonateLink/>
+  <Config Name="WebUI Port" Target="80" Default="6556" Mode="tcp" Description="Host port for the web app, PocketBase API and admin (proxied by nginx on container port 80)." Type="Port" Display="always" Required="true" Mask="false">8888</Config>
+  <Config Name="App Data" Target="/data" Default="/mnt/user/appdata/video-ware" Mode="rw" Description="Persistent storage: PocketBase database, uploaded media, and the Redis queue." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/video-ware</Config>
+  <Config Name="Admin Email" Target="POCKETBASE_ADMIN_EMAIL" Default="admin@example.com" Mode="" Description="Email for the auto-created PocketBase superuser." Type="Variable" Display="always" Required="true" Mask="false">admin@example.com</Config>
+  <Config Name="Admin Password" Target="POCKETBASE_ADMIN_PASSWORD" Default="" Mode="" Description="Password for the auto-created PocketBase superuser. MUST be set to a strong value - leaving it at the default skips superuser creation." Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="Storage Type" Target="STORAGE_TYPE" Default="local" Mode="" Description="Storage backend: 'local' (files under /data) or 's3'. For 's3' you must also supply the STORAGE_S3_* variables (see README)." Type="Variable" Display="advanced" Required="false" Mask="false">local</Config>
+  <Config Name="Log Level" Target="LOG_LEVEL" Default="warn" Mode="" Description="Logging verbosity: error, warn, info, debug, verbose." Type="Variable" Display="advanced" Required="false" Mask="false">warn</Config>
+</Container>

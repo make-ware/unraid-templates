@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<CommunityApplications>
+  <Profile>
+    Make-Ware publishes free, open-source, self-hosted web applications. This repository hosts
+    those templates. VideoWare, a self-hosted, browser-based video editor for
+    uploading media, creating clips, editing timelines, and collaborating with other users in 
+    real time.
+  </Profile>
+  <Icon>https://raw.githubusercontent.com/make-ware/unraid-templates/main/icon.png</Icon>
+  <WebPage>https://makeware.io</WebPage>
+
+  <!-- Optional support links -->
+  <!-- <Forum>https://forums.unraid.net/topic/YOUR_SUPPORT_TOPIC</Forum> -->
+</CommunityApplications>
