@@ -138,7 +138,7 @@ All persistent state lives under the single **App Data** mount (`/data`):
 
 - **Issues / support:** https://github.com/make-ware/video-ware/issues
 - **Application source:** https://github.com/make-ware/video-ware
-- **Container image:** `ghcr.io/make-ware/video-ware:latest`
+- **Container image:** `dastron/video-ware:latest`
 
 ## This repository
 
