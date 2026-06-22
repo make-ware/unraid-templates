@@ -33,6 +33,44 @@ This template runs the **monolithic** image, which bundles all services in one c
 **First run:** set a strong **Admin Password** - the PocketBase superuser is auto-created on startup from the Admin Email/Password you provide.&#xD;
 &#xD;
 **Storage:** all persistent data (PocketBase DB, uploaded media, and the Redis queue) lives under the single `/data` mount, so the whole app is captured by one appdata path. Optional S3-compatible storage and Google Cloud Video Intelligence can be enabled via extra variables (see the project README).</Description>
+  <Changes>
+[center][b]VideoWare Release Notes[/b][/center]
+&#xD;
+[i]Full changelog: https://github.com/make-ware/video-ware/blob/main/CHANGELOG.md[/i]
+&#xD;
+<!-- NEW_CHANGES_HERE -->
+&#xD;
+[b]v0.8.2[/b] (2026-06-22)
+[list]
+[*]Add timeline zoom
+[*]Sync video with clip editor
+[*]Update media type filter
+[/list]
+&#xD;
+[b]v0.8.1[/b] (2026-06-22)
+[list]
+[*]Add GitHub link to Docker Hub readme
+[*]Enable captions from label data
+[*]Organize PocketBase hooks
+[*]Restore old timeline renders
+[/list]
+&#xD;
+[b]v0.8.0[/b] (2026-06-22)
+[list]
+[*]Add clean up task
+[*]Add CLI
+[*]Add Docker Hub deployment
+[*]Move scheduling to PocketBase hooks
+[*]Add cascade delete to files
+[*]Add changelog to Docker Hub
+[*]Add cleanup hooks and tasks
+[*]Add nightly option and fix build
+[*]Add task type to spinner
+[*]Add transcode clean up
+[*]Append mediaRef to filmstrips
+[*]Fix audio attenuation bug
+[/list]
+</Changes>
   <Category>MediaApp:Video Tools:Utilities Productivity</Category>
   <WebUI>http://[IP]:[PORT:80]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/make-ware/unraid-templates/main/video-ware/video-ware.xml</TemplateURL>
