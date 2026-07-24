@@ -1,5 +1,236 @@
 # Changelog
 
+## [0.10.3](https://github.com/make-ware/video-ware/compare/video-ware-v0.10.2...video-ware-v0.10.3) (2026-07-24)
+
+
+### Bug Fixes
+
+* add experimental watch folder ([22b47b3](https://github.com/make-ware/video-ware/commit/22b47b3ac605cb050dbeb91f664f5d8ec7541377))
+* gate audio only labels on files with no audio ([245ddb0](https://github.com/make-ware/video-ware/commit/245ddb042ef9562b57c11a8871eab202c7af10b3))
+* improve upload handler ([2632eb9](https://github.com/make-ware/video-ware/commit/2632eb964c1d59a5ad34f8437049c0e76fb27cdf))
+* prevent failed uploads ([36c4b91](https://github.com/make-ware/video-ware/commit/36c4b917e723dbfb6554300a387f88549dd67da1))
+
+## [0.10.2](https://github.com/make-ware/video-ware/compare/video-ware-v0.10.1...video-ware-v0.10.2) (2026-07-23)
+
+
+### Bug Fixes
+
+* add storage dl dedup ([71a55e4](https://github.com/make-ware/video-ware/commit/71a55e43d14ce8986e1829f4c36584ea5d6b4064))
+* add timeline edit overlays ([62e4ead](https://github.com/make-ware/video-ware/commit/62e4ead86637ce2bd99e45aad6b5f77216556693))
+* add timeline preview ([3e51869](https://github.com/make-ware/video-ware/commit/3e5186993b0c1c2e275c33b382240a8e2fc460a5))
+
+## [0.10.1](https://github.com/make-ware/video-ware/compare/video-ware-v0.10.0...video-ware-v0.10.1) (2026-07-21)
+
+
+### Bug Fixes
+
+* add draggable trim handles ([abc3705](https://github.com/make-ware/video-ware/commit/abc3705f2305c2b3f968acb95fcd2a1462ae0d0d))
+* non-destructive composite clips (presence-based edit lists) ([f9ed518](https://github.com/make-ware/video-ware/commit/f9ed518e4274c92ef002211811d9f6a5069774f1))
+* non-destructive composite clips via presence-based edit lists ([bc91dce](https://github.com/make-ware/video-ware/commit/bc91dce6ab2a3fb8c80f0339c37b45dae36202e5))
+
+## [0.10.0](https://github.com/make-ware/video-ware/compare/video-ware-v0.9.10...video-ware-v0.10.0) (2026-07-21)
+
+
+### Features
+
+* **labels:** store standalone face attributes + request them explicitly ([46051dc](https://github.com/make-ware/video-ware/commit/46051dc868022accdca8c6248a004b93f14a3d01))
+* **labels:** store standalone face attributes + request them explicitly ([3c1c394](https://github.com/make-ware/video-ware/commit/3c1c394551509cdcfccc1ba4c385337206973dc4))
+
+
+### Bug Fixes
+
+* add window for clip editors ([da200f4](https://github.com/make-ware/video-ware/commit/da200f438d818af3f1b5080487f0b744230eff94))
+* improve cli commands and help docs ([495ca29](https://github.com/make-ware/video-ware/commit/495ca29017fc724dee7c7f85f776ccbe8ecb12e7))
+* lint warnings ([de69276](https://github.com/make-ware/video-ware/commit/de6927698132fffefa791d17139d6fcbf2a27c52))
+* remove timelineData from timeline entity ([7558683](https://github.com/make-ware/video-ware/commit/755868305381b40c9cea669849a95765e05f9713))
+* replace explicit any in shared mutators and s3 backend ([3a4a7a6](https://github.com/make-ware/video-ware/commit/3a4a7a639d38b0d3048e9edd84b4439135d9db66))
+* replace explicit any in shared mutators and s3 backend ([11abc74](https://github.com/make-ware/video-ware/commit/11abc741d1553b4b9bcf382bfbb4459ef8892ce3))
+* resolve webapp eslint warnings ([6eb3040](https://github.com/make-ware/video-ware/commit/6eb304080755100f9a8edf1fa593b8c2df023259))
+* resolve webapp eslint warnings ([a2858b6](https://github.com/make-ware/video-ware/commit/a2858b67c9095fcf84ec44ea3bcb104c3be1148c))
+* support media types ([cb35804](https://github.com/make-ware/video-ware/commit/cb35804089ac7508afdb80623c24381a06e31958))
+
+## [0.9.10](https://github.com/make-ware/video-ware/compare/video-ware-v0.9.9...video-ware-v0.9.10) (2026-07-19)
+
+
+### Bug Fixes
+
+* add realtime timeline sync ([7ac9710](https://github.com/make-ware/video-ware/commit/7ac971002e568dd8e961da89c05d9ee5448fb6ea))
+* long running tasks being reaped ([dc7502a](https://github.com/make-ware/video-ware/commit/dc7502aeed8132589ca82abf94cbd7c106f12394))
+* update readme ([4f29a9c](https://github.com/make-ware/video-ware/commit/4f29a9cc4badd728aaea8e8b28d72548ed7c4e74))
+
+## [0.9.9](https://github.com/make-ware/video-ware/compare/video-ware-v0.9.8...video-ware-v0.9.9) (2026-07-18)
+
+
+### Bug Fixes
+
+* add upload cli commands ([50b64c5](https://github.com/make-ware/video-ware/commit/50b64c54f28967859429bebd178886e7c2dacbf2))
+* improve entity and label page ([2b35328](https://github.com/make-ware/video-ware/commit/2b35328fdae8b192c247875311f88da88d15c2e4))
+* improve entity page layout ([5116d96](https://github.com/make-ware/video-ware/commit/5116d9625bf7559e0f216821a469d325d277a44c))
+
+## [0.9.8](https://github.com/make-ware/video-ware/compare/video-ware-v0.9.7...video-ware-v0.9.8) (2026-07-18)
+
+
+### Bug Fixes
+
+* add bundle to yarn precommit ([c8caea3](https://github.com/make-ware/video-ware/commit/c8caea374c3be44879dac5250245afc32d33b179))
+* add concurrent label jobs ([a81a30c](https://github.com/make-ware/video-ware/commit/a81a30cdc13f28a3079f3bb654c41601953f001a))
+* add entity explore page ([6021401](https://github.com/make-ware/video-ware/commit/60214012baae3017a992b8dc8465a3cee396eb11))
+* add label inspector upgrade ([54c1721](https://github.com/make-ware/video-ware/commit/54c17216ce9a7e89f07bee49a39bc0b5c65427bf))
+
+## [0.9.7](https://github.com/make-ware/video-ware/compare/video-ware-v0.9.6...video-ware-v0.9.7) (2026-07-17)
+
+
+### Bug Fixes
+
+* add timeline strict flag ([3a9db64](https://github.com/make-ware/video-ware/commit/3a9db643d438ceddcc5c4e5e713353c3fe7ad3a7))
+* cli bundle ([7c237ab](https://github.com/make-ware/video-ware/commit/7c237ab4df6ce8d5a6da20b860ea97ff7651f171))
+
+## [0.9.6](https://github.com/make-ware/video-ware/compare/video-ware-v0.9.5...video-ware-v0.9.6) (2026-07-16)
+
+
+### Bug Fixes
+
+* add cli commands, upload and job ([5a71275](https://github.com/make-ware/video-ware/commit/5a712752ffd6a0f181a9b2ef8067cc302a172e22))
+* add clip type filter for timeline editor ([3173a5e](https://github.com/make-ware/video-ware/commit/3173a5e70d5159a99cb7ceb5d7c28431b8d4944b))
+* CLI upload client errors ([1632e2e](https://github.com/make-ware/video-ware/commit/1632e2ef844a7b1ca377cab74481c1a38e557d64))
+
+## [0.9.5](https://github.com/make-ware/video-ware/compare/video-ware-v0.9.4...video-ware-v0.9.5) (2026-07-16)
+
+
+### Bug Fixes
+
+* add directory cli commands ([5793455](https://github.com/make-ware/video-ware/commit/579345528db8faa4a632d76093dec6a067dc5c5f))
+* add timeline insert reference cli command ([23a837f](https://github.com/make-ware/video-ware/commit/23a837f43015b57180e0cc9d08985c5339ac5c10))
+* add upload cli command ([838e47e](https://github.com/make-ware/video-ware/commit/838e47eb6d71c45c4ad932b1a1d270a260327932))
+* improve ffmpeg render and add fps ([a295c1f](https://github.com/make-ware/video-ware/commit/a295c1f6c4a5ac112cfc093ea41600426196289d))
+
+## [0.9.4](https://github.com/make-ware/video-ware/compare/video-ware-v0.9.3...video-ware-v0.9.4) (2026-07-15)
+
+
+### Bug Fixes
+
+* add doctor timeline ([7053375](https://github.com/make-ware/video-ware/commit/7053375a94106823f7089e9ce887c055c36403a6))
+* add ffmpeg lossless window render ([23e2c50](https://github.com/make-ware/video-ware/commit/23e2c50b65225c5f346efb581ed43206f95bcde2))
+* improve ffmpeg error logs ([51cff62](https://github.com/make-ware/video-ware/commit/51cff62d0236104ba83d0bc1abbbbc849575859e))
+* move actions to file and edit menu ([c3cb220](https://github.com/make-ware/video-ware/commit/c3cb220963b73399ff5484cefc514dd56509842b))
+
+## [0.9.3](https://github.com/make-ware/video-ware/compare/video-ware-v0.9.2...video-ware-v0.9.3) (2026-07-15)
+
+
+### Bug Fixes
+
+* add version to logo and fix transcoding spinner ([71e68ac](https://github.com/make-ware/video-ware/commit/71e68ac87e55d0a7150c25ec35fd9acd5367cc72))
+* tune timeline buffer and file cleanup task ([1e589f5](https://github.com/make-ware/video-ware/commit/1e589f593a0b399f37000a78cf0a46517fd49b6c))
+* update cli actions ([64a2813](https://github.com/make-ware/video-ware/commit/64a2813c00810e8b475214140c528d6fd45eaebe))
+
+## [0.9.2](https://github.com/make-ware/video-ware/compare/video-ware-v0.9.1...video-ware-v0.9.2) (2026-07-14)
+
+
+### Bug Fixes
+
+* add non-destructive timeline shifting ([98785bd](https://github.com/make-ware/video-ware/commit/98785bdfed029b88c19d7e0dfc5afb9f95bc5ca8))
+* add timeline preview double buffer ([8902b4e](https://github.com/make-ware/video-ware/commit/8902b4ec3d188730684c094e273b1f322a7b2243))
+* allow delete timeline renders ([c0fc4a3](https://github.com/make-ware/video-ware/commit/c0fc4a364ad33afe51856b695e6c276136a31816))
+
+## [0.9.1](https://github.com/make-ware/video-ware/compare/video-ware-v0.9.0...video-ware-v0.9.1) (2026-07-13)
+
+
+### Bug Fixes
+
+* add robust permissions ([b7bc41b](https://github.com/make-ware/video-ware/commit/b7bc41bc4500ad3a322ab08ad5bf293b9b9baec3))
+* caption not rendering properly ([4fafc05](https://github.com/make-ware/video-ware/commit/4fafc05d8f29bf1c39dd7a0153929d09fbd71fda))
+* dev worker directory mapping ([627aee4](https://github.com/make-ware/video-ware/commit/627aee4cfcffd156747404f45746274ab5e36dee))
+* lock down workspace collection rules ([72724b3](https://github.com/make-ware/video-ware/commit/72724b303ba2e6a2fded99360de1e0440af72fef))
+* reduce logging noise ([9771c66](https://github.com/make-ware/video-ware/commit/9771c662cefde4d5dc232cd8639d3dfc5fd3a8fa))
+
+## [0.9.0](https://github.com/make-ware/video-ware/compare/video-ware-v0.8.10...video-ware-v0.9.0) (2026-07-11)
+
+
+### Features
+
+* add advanced editor for clips ([74f3551](https://github.com/make-ware/video-ware/commit/74f35517ffcfc634c9b40f8566a796f0d0dc4ac1))
+* add CLI to github actions ([349ee66](https://github.com/make-ware/video-ware/commit/349ee66c4ed091c3f6141d0d85bf43baa57c63a3))
+
+
+### Bug Fixes
+
+* add media replacement page ([325d711](https://github.com/make-ware/video-ware/commit/325d7119648a372d2025f25cfccb50afa18d7bcc))
+* add speaker panel to media ([6a5cf66](https://github.com/make-ware/video-ware/commit/6a5cf667ad81b488da2138aa57b328516565a2cb))
+* include linked entities in CLI ([25c93ec](https://github.com/make-ware/video-ware/commit/25c93ec11f4b246e738ac7a49c8b7f5fd622d012))
+* pocketbase hook linter ([507a1fb](https://github.com/make-ware/video-ware/commit/507a1fb5a9b09138445a08bd06a40fe5f5c03f18))
+* speaker detection use audio proxy ([1884f02](https://github.com/make-ware/video-ware/commit/1884f02b28ca2b9abc7ce803fc8e09cda71feef3))
+* update cli add clip update and delete ([a249ca5](https://github.com/make-ware/video-ware/commit/a249ca5afec50524b8ec65288cafd73efe6bfae5))
+* update subtitles to only include spoken words ([8079781](https://github.com/make-ware/video-ware/commit/80797819b1c2450463fa3240ddfcdb04ee998f74))
+
+## [0.8.10](https://github.com/make-ware/video-ware/compare/video-ware-v0.8.9...video-ware-v0.8.10) (2026-07-07)
+
+
+### Bug Fixes
+
+* add watchdog and unbound ffmpeg ([ab142f4](https://github.com/make-ware/video-ware/commit/ab142f40ce656b409ac6053d863bf0dea83c64ff))
+* timeline render regular download ([0a4da54](https://github.com/make-ware/video-ware/commit/0a4da540ebe78697904804514675171444fb639c))
+
+## [0.8.9](https://github.com/make-ware/video-ware/compare/video-ware-v0.8.8...video-ware-v0.8.9) (2026-07-07)
+
+
+### Bug Fixes
+
+* add functionality to entities refs ([6b9c3eb](https://github.com/make-ware/video-ware/commit/6b9c3ebf49e67838f083d25085d57b7a77744d1e))
+* render fail faster ([bd44417](https://github.com/make-ware/video-ware/commit/bd4441771b5af451de79bef20250912483a7d3a7))
+* update ffmpeg compostion ([f61c887](https://github.com/make-ware/video-ware/commit/f61c887d83e52e2603761cd28d0777087a3fa6a9))
+* update label indexes ([0ceacfa](https://github.com/make-ware/video-ware/commit/0ceacfac9dfb3314d3dc783bf924107f05107969))
+
+## [0.8.8](https://github.com/make-ware/video-ware/compare/video-ware-v0.8.7...video-ware-v0.8.8) (2026-07-06)
+
+
+### Bug Fixes
+
+* add ripple delete ([d62dab4](https://github.com/make-ware/video-ware/commit/d62dab49a401fda9693b9792a6a5ece743f07b4d))
+* reduce memory usage in docker ([1d2e11a](https://github.com/make-ware/video-ware/commit/1d2e11a2b196a084dd4414ba924a6549aebaa07b))
+
+## [0.8.7](https://github.com/make-ware/video-ware/compare/video-ware-v0.8.6...video-ware-v0.8.7) (2026-07-06)
+
+
+### Bug Fixes
+
+* add entity link for labels ([f1a6a81](https://github.com/make-ware/video-ware/commit/f1a6a81b5c0163a542164ced6640ec55fc93ba48))
+* LabelTrack data overflow ([c2bf91d](https://github.com/make-ware/video-ware/commit/c2bf91d9f7f1dac3abaaf65f0da48a5bf168d6d3))
+
+## [0.8.6](https://github.com/make-ware/video-ware/compare/video-ware-v0.8.5...video-ware-v0.8.6) (2026-07-06)
+
+
+### Bug Fixes
+
+* add elevenlabs stt for speakers and cli captions ([94579dd](https://github.com/make-ware/video-ware/commit/94579dd5b1c7b231db30eec4f25e97b52ed1d8a4))
+* keep media tabbing on the same subpage ([52cd2a7](https://github.com/make-ware/video-ware/commit/52cd2a7fa023160ca36ecf7dd46dc6334dfe1497))
+* update timeline and render page ([3b443e4](https://github.com/make-ware/video-ware/commit/3b443e41651fd1e6e2962e9af297a686c1095aa9))
+
+## [0.8.5](https://github.com/make-ware/video-ware/compare/video-ware-v0.8.4...video-ware-v0.8.5) (2026-07-05)
+
+
+### Bug Fixes
+
+* Add additional toggle for captions ([6d3f254](https://github.com/make-ware/video-ware/commit/6d3f254d358bc20da2a1a36d46c26f9784f654b2))
+* add nested timelines ([310b8ea](https://github.com/make-ware/video-ware/commit/310b8eaf09b525c0c3a7f5346621d2b4e3d9b6c6))
+* add timeline overview page ([cb9976d](https://github.com/make-ware/video-ware/commit/cb9976d7d3e4b0459e58cf1c70a3b1c1d37f7466))
+* improve cli ([a1d1cb8](https://github.com/make-ware/video-ware/commit/a1d1cb8f7d144c1f43cadc5d9f6f9048376e76f0))
+* improve task and label layout ([889bc0e](https://github.com/make-ware/video-ware/commit/889bc0e3b1d7ccc3367f3cc80e68ec7ec71d7641))
+
+## [0.8.4](https://github.com/make-ware/video-ware/compare/video-ware-v0.8.3...video-ware-v0.8.4) (2026-07-04)
+
+
+### Bug Fixes
+
+* resolve label bugs ([a8bb00f](https://github.com/make-ware/video-ware/commit/a8bb00f9746561e8f6a59014ae08cfc028c5b3e8))
+
+## [0.8.3](https://github.com/make-ware/video-ware/compare/video-ware-v0.8.2...video-ware-v0.8.3) (2026-07-03)
+
+
+### Bug Fixes
+
+* improve docs ([ccda62f](https://github.com/make-ware/video-ware/commit/ccda62fa5ef3e53804f2143df08df18349d2fa92))
+* update cli and add label fields ([497392b](https://github.com/make-ware/video-ware/commit/497392b1df68a22ede106de4623e1467e172a97f))
+
 ## [0.8.2](https://github.com/make-ware/video-ware/compare/video-ware-v0.8.1...video-ware-v0.8.2) (2026-06-22)
 
 

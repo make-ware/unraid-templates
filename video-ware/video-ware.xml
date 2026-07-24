@@ -40,6 +40,180 @@ This template runs the **monolithic** image, which bundles all services in one c
 &#xD;
 <!-- NEW_CHANGES_HERE -->
 &#xD;
+[b]v0.10.3[/b] (2026-07-24)
+[list]
+[*]Add experimental watch folder
+[*]Gate audio only labels on files with no audio
+[*]Improve upload handler
+[*]Prevent failed uploads
+[/list]
+&#xD;
+[b]v0.10.2[/b] (2026-07-23)
+[list]
+[*]Add storage dl dedup
+[*]Add timeline edit overlays
+[*]Add timeline preview
+[/list]
+&#xD;
+[b]v0.10.1[/b] (2026-07-21)
+[list]
+[*]Add draggable trim handles
+[*]Non-destructive composite clips (presence-based edit lists)
+[*]Non-destructive composite clips via presence-based edit lists
+[/list]
+&#xD;
+[b]v0.10.0[/b] (2026-07-21)
+[list]
+[*]Store standalone face attributes + request them explicitly
+[*]Add window for clip editors
+[*]Improve cli commands and help docs
+[*]Lint warnings
+[*]Remove timelineData from timeline entity
+[*]Replace explicit any in shared mutators and s3 backend
+[*]Resolve webapp eslint warnings
+[*]Support media types
+[/list]
+&#xD;
+[b]v0.9.10[/b] (2026-07-19)
+[list]
+[*]Add realtime timeline sync
+[*]Long running tasks being reaped
+[*]Update readme
+[/list]
+&#xD;
+[b]v0.9.9[/b] (2026-07-18)
+[list]
+[*]Add upload cli commands
+[*]Improve entity and label page
+[*]Improve entity page layout
+[/list]
+&#xD;
+[b]v0.9.8[/b] (2026-07-18)
+[list]
+[*]Add bundle to yarn precommit
+[*]Add concurrent label jobs
+[*]Add entity explore page
+[*]Add label inspector upgrade
+[/list]
+&#xD;
+[b]v0.9.7[/b] (2026-07-17)
+[list]
+[*]Add timeline strict flag
+[*]Cli bundle
+[/list]
+&#xD;
+[b]v0.9.6[/b] (2026-07-16)
+[list]
+[*]Add cli commands, upload and job
+[*]Add clip type filter for timeline editor
+[*]CLI upload client errors
+[/list]
+&#xD;
+[b]v0.9.5[/b] (2026-07-16)
+[list]
+[*]Add directory cli commands
+[*]Add timeline insert reference cli command
+[*]Add upload cli command
+[*]Improve ffmpeg render and add fps
+[/list]
+&#xD;
+[b]v0.9.4[/b] (2026-07-15)
+[list]
+[*]Add doctor timeline
+[*]Add ffmpeg lossless window render
+[*]Improve ffmpeg error logs
+[*]Move actions to file and edit menu
+[/list]
+&#xD;
+[b]v0.9.3[/b] (2026-07-15)
+[list]
+[*]Add version to logo and fix transcoding spinner
+[*]Tune timeline buffer and file cleanup task
+[*]Update cli actions
+[/list]
+&#xD;
+[b]v0.9.2[/b] (2026-07-14)
+[list]
+[*]Add non-destructive timeline shifting
+[*]Add timeline preview double buffer
+[*]Allow delete timeline renders
+[/list]
+&#xD;
+[b]v0.9.1[/b] (2026-07-13)
+[list]
+[*]Add robust permissions
+[*]Caption not rendering properly
+[*]Dev worker directory mapping
+[*]Lock down workspace collection rules
+[*]Reduce logging noise
+[/list]
+&#xD;
+[b]v0.9.0[/b] (2026-07-11)
+[list]
+[*]Add advanced editor for clips
+[*]Add CLI to github actions
+[*]Add media replacement page
+[*]Add speaker panel to media
+[*]Include linked entities in CLI
+[*]Pocketbase hook linter
+[*]Speaker detection use audio proxy
+[*]Update cli add clip update and delete
+[*]Update subtitles to only include spoken words
+[/list]
+&#xD;
+[b]v0.8.10[/b] (2026-07-07)
+[list]
+[*]Add watchdog and unbound ffmpeg
+[*]Timeline render regular download
+[/list]
+&#xD;
+[b]v0.8.9[/b] (2026-07-07)
+[list]
+[*]Add functionality to entities refs
+[*]Render fail faster
+[*]Update ffmpeg compostion
+[*]Update label indexes
+[/list]
+&#xD;
+[b]v0.8.8[/b] (2026-07-06)
+[list]
+[*]Add ripple delete
+[*]Reduce memory usage in docker
+[/list]
+&#xD;
+[b]v0.8.7[/b] (2026-07-06)
+[list]
+[*]Add entity link for labels
+[*]LabelTrack data overflow
+[/list]
+&#xD;
+[b]v0.8.6[/b] (2026-07-06)
+[list]
+[*]Add elevenlabs stt for speakers and cli captions
+[*]Keep media tabbing on the same subpage
+[*]Update timeline and render page
+[/list]
+&#xD;
+[b]v0.8.5[/b] (2026-07-05)
+[list]
+[*]Add additional toggle for captions
+[*]Add nested timelines
+[*]Add timeline overview page
+[*]Improve cli
+[*]Improve task and label layout
+[/list]
+&#xD;
+[b]v0.8.4[/b] (2026-07-04)
+[list]
+[*]Resolve label bugs
+[/list]
+&#xD;
+[b]v0.8.3[/b] (2026-07-03)
+[list]
+[*]Improve docs
+[*]Update cli and add label fields
+[/list]
+&#xD;
 [b]v0.8.2[/b] (2026-06-22)
 [list]
 [*]Add timeline zoom
@@ -49,9 +223,9 @@ This template runs the **monolithic** image, which bundles all services in one c
 &#xD;
 [b]v0.8.1[/b] (2026-06-22)
 [list]
-[*]Add GitHub link to Docker Hub readme
+[*]Add github link to dockerhub readme
 [*]Enable captions from label data
-[*]Organize PocketBase hooks
+[*]Organize pocketbase hooks
 [*]Restore old timeline renders
 [/list]
 &#xD;
@@ -59,16 +233,16 @@ This template runs the **monolithic** image, which bundles all services in one c
 [list]
 [*]Add clean up task
 [*]Add CLI
-[*]Add Docker Hub deployment
-[*]Move scheduling to PocketBase hooks
+[*]Add docker hub deployment
+[*]Move scheduling to pocketbase hooks
 [*]Add cascade delete to files
-[*]Add changelog to Docker Hub
+[*]Add changelog to dockerhub
 [*]Add cleanup hooks and tasks
 [*]Add nightly option and fix build
 [*]Add task type to spinner
 [*]Add transcode clean up
 [*]Append mediaRef to filmstrips
-[*]Fix audio attenuation bug
+[*]Audio attenuation bug
 [/list]
 </Changes>
   <Category>MediaApp:Video Tools:Utilities Productivity</Category>
