@@ -1,10 +1,11 @@
 # VideoWare for Unraid
 
 Unraid Community Applications template for **VideoWare** — a free, open-source, self-hosted
-video editor that runs in your browser. Upload media, get fast previews (thumbnails &
-sprites), edit and render clips on a timeline, and collaborate with other users on the same
-project in real time — all from one container. Optionally enable Video Intelligence to unlock
-universal search across your media (entirely optional).
+video editor with a command line interface. VideoWare pairs a browser-based timeline editor
+with a CLI (`vw`) that can do everything the editor can: ingest footage, find moments by
+what's said or seen, cut clips, compose multi-track timelines, and render the result. That
+makes video editing scriptable — by you, by a pipeline, or by an AI agent editing on your
+behalf — and it all runs on your Unraid server, so your media never has to leave it.
 
 > **One container, one port, one data path.** This template runs the *monolithic*
 > VideoWare image, which bundles the web app, database, background worker, and its job
@@ -15,13 +16,19 @@ universal search across your media (entirely optional).
 
 ## Features
 
-- **Runs in your browser** — nothing to install on the client
-- **Real-time collaboration** — multiple users editing the same project at once
-- **Upload media** with progress tracking and validation
-- **Fast previews** — thumbnails and hover sprites generated in the background
-- **Clip editing & timeline rendering** — compose and export final videos
-- **FFmpeg-powered** transcoding and rendering, built in
-- **Universal search** *(optional)* — enable Video Intelligence to find clips by what's actually in them
+- **A real editor in the browser** — multi-track drag-and-drop timeline, nested timelines,
+  captions, and live preview; nothing to install on the client
+- **Edit from the command line** — the `vw` CLI covers the entire workflow: upload, search,
+  clip, compose, render. Designed for scripts and AI agents, with `vw workspace export` to
+  dump context and `vw timeline doctor` to verify edits
+- **Searchable footage** — speech-to-text with speaker labels, plus optional visual analysis
+  (objects, faces, people, shot changes) via Google Cloud Video Intelligence, so "find where
+  she says…" is a one-line search
+- **Real-time collaboration** — workspaces with role-based access; CLI edits and other
+  users' changes show up in the editor instantly
+- **Fast previews** — thumbnails, scrub sprites, and proxy videos generated automatically on
+  upload with FFmpeg
+- **Render to file** — export any timeline to a finished video
 - **Flexible storage** — local appdata by default, or any S3-compatible bucket
 - **Built-in auth & API** via PocketBase, with a realtime database and admin UI
 - **Free & open source**
@@ -73,6 +80,41 @@ https://raw.githubusercontent.com/make-ware/unraid-templates/main/video-ware/vid
 
 ---
 
+## Editing from the command line (`vw`)
+
+Everything the web editor can do is also available from the `vw` CLI — which turns your
+Unraid box into a scriptable video-editing backend for shell scripts, pipelines, and AI
+agents. CLI edits show up in the browser editor in real time.
+
+Install the CLI on your workstation (not on the Unraid server) and log in against your
+VideoWare instance:
+
+```bash
+brew tap make-ware/tap && brew install vw
+vw login    # point it at http://<UNRAID-IP>:<PORT>
+```
+
+Not on Homebrew? Every [GitHub release](https://github.com/make-ware/video-ware/releases)
+ships a standalone `vw` build.
+
+A complete edit, start to finish:
+
+```bash
+vw upload create raw/*.mp4                                  # ingest footage
+vw label search "let's get started"                         # find moments by speech or visuals
+vw label clip speech LABEL_ID --label "Cold open"           # turn a moment into a clip
+vw timeline create "Episode 4" --tracks "Music,Interview,B-Roll"
+vw timeline insert -t TIMELINE_ID --clips CLIP_ID --track 1
+vw timeline render -t TIMELINE_ID --download episode-4.mp4
+```
+
+For scripts and agents there's also `vw workspace export` to dump workspace context and
+`vw timeline doctor` to verify a timeline after edits. See the
+[CLI guide](https://github.com/make-ware/video-ware/blob/main/cli/README.md) for the full
+command reference and the end-to-end agent editing flow.
+
+---
+
 ## Configuration
 
 These map to the fields shown in the Unraid template:
@@ -99,13 +141,13 @@ Set **Storage Type** to `s3` and add these variables (Add another Path, Port, Va
 | `STORAGE_S3_ENDPOINT`         |          | Defaults to `https://s3.<region>.amazonaws.com`                |
 | `STORAGE_S3_FORCE_PATH_STYLE` |          | `true` for MinIO/Garage-style endpoints                        |
 
-### Optional: Video Intelligence & universal search (Google Cloud)
+### Optional: Video Intelligence & visual search (Google Cloud)
 
-VideoWare is fully functional without this. If you want **universal search** — finding clips
-by what's actually in them (objects, faces, people, spoken words, shot changes) — add
-`GOOGLE_PROJECT_ID`, `GOOGLE_CLOUD_CREDENTIALS` (inline service-account JSON), and `GCS_BUCKET`
-to enable Google Cloud Video Intelligence. This is entirely optional. See the project README
-for details.
+VideoWare is fully functional without this — search by what's *said* works without it. If
+you also want to find footage by what's *seen* — objects, faces, people, and shot changes —
+add `GOOGLE_PROJECT_ID`, `GOOGLE_CLOUD_CREDENTIALS` (inline service-account JSON), and
+`GCS_BUCKET` to enable Google Cloud Video Intelligence. This is entirely optional. See the
+project README for details.
 
 ### Exposing via Cloudflare Tunnel (cloudflared)
 
@@ -138,6 +180,8 @@ All persistent state lives under the single **App Data** mount (`/data`):
 
 - **Issues / support:** https://github.com/make-ware/video-ware/issues
 - **Application source:** https://github.com/make-ware/video-ware
+- **CLI guide:** https://github.com/make-ware/video-ware/blob/main/cli/README.md
+- **Releases (standalone `vw` builds):** https://github.com/make-ware/video-ware/releases
 - **Container image:** `dastron/video-ware:latest`
 
 ## This repository
@@ -148,11 +192,14 @@ folder:
 ```
 unraid-templates/
 ├── ca_profile.xml            # CA repository profile
-├── icon.png                  # Repository / maintainer icon
+├── profile.jpeg              # Repository / maintainer icon
 ├── README.md                 # Repository overview
+├── scripts/
+│   └── generate-changes.py   # Regenerates the template's <Changes> block from CHANGELOG.md
 └── video-ware/
     ├── video-ware.xml        # Docker app template (monolithic image)
     ├── icon.png              # App icon
+    ├── CHANGELOG.md          # Upstream changelog (feeds the template's <Changes> block)
     ├── README.md             # This file
     └── images/               # Screenshots shown in Community Applications
 ```
