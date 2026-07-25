@@ -40,6 +40,18 @@ This template runs the **monolithic** image, which bundles all services in one c
 &#xD;
 <!-- NEW_CHANGES_HERE -->
 &#xD;
+[b]v0.10.5[/b] (2026-07-24)
+[list]
+[*]Label detection warning
+[*]Upload progress bar in webapp
+[/list]
+&#xD;
+[b]v0.10.4[/b] (2026-07-24)
+[list]
+[*]Add parallel uploads
+[*]Add text data dedup
+[/list]
+&#xD;
 [b]v0.10.3[/b] (2026-07-24)
 [list]
 [*]Add experimental watch folder

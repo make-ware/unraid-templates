@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.10.5](https://github.com/make-ware/video-ware/compare/video-ware-v0.10.4...video-ware-v0.10.5) (2026-07-24)
+
+
+### Bug Fixes
+
+* label detection warning ([d2c8c61](https://github.com/make-ware/video-ware/commit/d2c8c612328afe3c9ab02d9e56b5c10bfde06a2c))
+* upload progress bar in webapp ([3740a19](https://github.com/make-ware/video-ware/commit/3740a1968d56c377d393f24d506d4aff931a6d5f))
+
+## [0.10.4](https://github.com/make-ware/video-ware/compare/video-ware-v0.10.3...video-ware-v0.10.4) (2026-07-24)
+
+
+### Bug Fixes
+
+* add parallel uploads ([1fe23f7](https://github.com/make-ware/video-ware/commit/1fe23f7cbe9603d100f7dfe036b1ddd8d7cd84a3))
+* add text data dedup ([34643f0](https://github.com/make-ware/video-ware/commit/34643f0ba2c4d197846f03cf761351e78e4d8ad6))
+
 ## [0.10.3](https://github.com/make-ware/video-ware/compare/video-ware-v0.10.2...video-ware-v0.10.3) (2026-07-24)
 
 
